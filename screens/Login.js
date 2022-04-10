@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {StatusBar} from 'expo-status-bar';
 //formik
 import {Formik} from 'formik';
@@ -36,7 +37,7 @@ const Login=()=>{
         <StyledContainer>
             <StatusBar style="dark" />
             <InnerContainer>
-                <PageLogo resizeMode="cover" source={require('./../assets/logo.PNG')} />
+                <PageLogo resizeMode="cover" source={require('./../assets/icon.png')} />
                 <PageTitle>Dagong</PageTitle>
                 <SubTitle>로그인 해주세요!</SubTitle>
 
@@ -46,16 +47,17 @@ const Login=()=>{
                         console.log(values);
                     }}
                 >
-                    {({handleChange, handleBlur, handleSubmit, values})=>(<StyledFormArea>
+                    {({handleChange, handleBlur, handleSubmit, values})=>(
+                    <StyledFormArea>
                         <MyTextInput
-                            label="ID"
-                            icon="sparkles-outline"
-                            placeholder="ID를 입력해주세요."
+                            label="Email Address"
+                            icon="mail"
+                            placeholder="dagnong@gmail.com"
                             placeholderTextColor={darkLight}
-                            onChangeText={handleChange('id')}
-                            onBlur={handleBlur('id')}
-                            value={values.id}
-                            keyboardType="id"
+                            onChangeText={handleChange('email')}
+                            onBlur={handleBlur('email')}
+                            value={values.email}
+                            keyboardType="email-address"
                         />
 
                         <MyTextInput
@@ -76,12 +78,12 @@ const Login=()=>{
                             <ButtonText>
                                 Login
                             </ButtonText>
-                        </styledButton>
+                        </StyledButton>
                         <Line />
                         <StyledButton onPress={handleSubmit}>
                             <ButtonText>Login</ButtonText>
                         </StyledButton>
-                        </StyledFormArea>
+                    </StyledFormArea>
                     )}
 
                 </Formik>
@@ -95,7 +97,7 @@ const MyTextInput=({label, icon, isPassword,hidePassword,setHidePassword, ...pro
     return (
         <View>
             <LeftIcon>
-                <Octicons name{icon} size={30} color={brand}/>
+                <Octicons name={icon} size={30} color={brand}/>
             </LeftIcon>
             <StyledInputLabel>{label}</StyledInputLabel>
             <StyledTextInput {...props} />
@@ -107,5 +109,6 @@ const MyTextInput=({label, icon, isPassword,hidePassword,setHidePassword, ...pro
         </View>
     );
 };
+
 
 export default Login;
