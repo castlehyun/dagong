@@ -37,7 +37,7 @@ const Login=()=>{
         <StyledContainer>
             <StatusBar style="dark" />
             <InnerContainer>
-                <PageLogo resizeMode="cover" source={require('./../assets/icon.png')} />
+                <PageLogo resizeMode="cover" source={require('./../assets/logo.png')} />
                 <PageTitle>Dagong</PageTitle>
                 <SubTitle>로그인 해주세요!</SubTitle>
 
