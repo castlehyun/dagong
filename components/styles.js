@@ -22,7 +22,7 @@ export const StyledContainer=styled.View`
     padding:25px;
     padding-top:${StatusBarHeight + 10}px;
     background-color:${primary};
-`
+`;
 
 export const InnerContainer=styled.View`
     flex:1;
@@ -57,7 +57,7 @@ export const StyledFormArea=styled.View`
 
 `;
 
-export const StyledTexInput=styled.TextInput`
+export const StyledTextInput=styled.TextInput`
     background-color:${secondary};
     padding:15px;
     padding-left:55px;
@@ -94,7 +94,7 @@ export const RightIcon=styled.TouchableOpacity`
 export const StyledButton = styled.TouchableOpacity`
     padding:15px;
     background-color:${brand};
-    justify-const:center;
+    justify-content:center;
     align-items:center;
     border-radius:5px;
     margin-vertical:5px;

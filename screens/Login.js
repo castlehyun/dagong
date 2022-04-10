@@ -25,7 +25,7 @@ import {
     ButtonText,
     Colors,
     MsgBox,
-    Line
+    Line,
 } from './../components/styles';
 
 //Colors
@@ -42,7 +42,7 @@ const Login=()=>{
                 <SubTitle>로그인 해주세요!</SubTitle>
 
                 <Formik
-                    initialValue={{email:'',password:''}}
+                    initialValues={{email:'',password:''}}
                     onSubmit={(values)=>{
                         console.log(values);
                     }}
