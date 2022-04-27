@@ -39,19 +39,27 @@ const Welcome=()=>{
     return (
         <StyledContainer>
             <StatusBar style="dark" />
+
             <InnerContainer>
-                    <WelcomeImage resizeMode="cover" source={require('./../assets/avatar.png')}/>
+                    <WelcomeImage resizeMode="cover" source={require('./../assets/insteadTm.png')}/>
                 <WelcomeContainer>
+                    <StyledButton onPress={()=>{}}>
+                        <ButtonText>
+                            투두리스트
+                        </ButtonText>
+                    </StyledButton>
+
                     <PageTitle welcome={true}>다공</PageTitle>
                     <SubTitle welcome={true}>다함께 공부하는 다공</SubTitle>
                     <StyledFormArea>
-                        <Avatar resizeMode="cover" source={require('./../assets/avatar.png')} />
+                        {/*여기다가 나중에 java로 만든 아바타 삽입*/}
                         <Line />
                         <StyledButton onPress={()=>{}}>
                             <ButtonText>
                                 스터디룸 입장
                             </ButtonText>
                         </StyledButton>
+
 
                     </StyledFormArea>
 
