@@ -150,3 +150,8 @@ export const Line=styled.View`
     margin-vertical:10px;
 
 `;
+
+export const Text=styled.Text`
+    color:${primary};
+    font-size:16px;
+`;

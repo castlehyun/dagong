@@ -28,7 +28,8 @@ import {
     Line,
     WelcomeContainer,
     WelcomeImage,
-    Avatar
+    Avatar,
+    Text,
 } from './../components/styles';
 
 //Colors
@@ -51,6 +52,9 @@ const Welcome=()=>{
                         </ButtonText>
                     </StyledButton>
                     <Icon name="heart-circle-outline" size={70} color="#2E79F2" />
+                    <Text>
+                        <Text>text</Text>
+                    </Text>
                 </InnerContainer>
 
         </StyledContainer>
