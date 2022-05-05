@@ -6,7 +6,7 @@ import {Formik} from 'formik';
 
 //icons
 import {Octicons, Ionicons} from '@expo/vector-icons';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import {View} from 'react-native';
 
@@ -37,36 +37,24 @@ const {brand,darkLight} = Colors;
 const Welcome=()=>{
     const [hidePassword, setHidePassword] = useState(true);
     return (
-        <StyledContainer>
-            <StatusBar style="dark" />
-
-            <InnerContainer>
-                    <WelcomeImage resizeMode="cover" source={require('./../assets/insteadTm.png')}/>
-                <WelcomeContainer>
+        <StyledContainer style={{flex:2,justifyContent:'space-around',flexDirection:'row'}}>
+                <StyledButton onPress={()=>{}}>
+                    <ButtonText>
+                        상점 가기
+                    </ButtonText>
+                </StyledButton>
+                <Icon name="alarm-outline" size={70} color="#2E79F2" />
+                <InnerContainer>
                     <StyledButton onPress={()=>{}}>
                         <ButtonText>
                             투두리스트
                         </ButtonText>
                     </StyledButton>
+                    <Icon name="heart-circle-outline" size={70} color="#2E79F2" />
+                </InnerContainer>
 
-                    <PageTitle welcome={true}>다공</PageTitle>
-                    <SubTitle welcome={true}>다함께 공부하는 다공</SubTitle>
-                    <StyledFormArea>
-                        {/*여기다가 나중에 java로 만든 아바타 삽입*/}
-                        <Line />
-                        <StyledButton onPress={()=>{}}>
-                            <ButtonText>
-                                스터디룸 입장
-                            </ButtonText>
-                        </StyledButton>
-
-
-                    </StyledFormArea>
-
-                </WelcomeContainer>
-
-            </InnerContainer>
         </StyledContainer>
+
     );
 };
 
