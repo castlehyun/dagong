@@ -45,16 +45,16 @@ const Welcome=()=>{
                     </ButtonText>
                 </StyledButton>
                 <Icon name="alarm-outline" size={70} color="#2E79F2" />
+                <Icon name="heart-circle-outline" size={70} color="#2E79F2" />
+                <StyledButton onPress={()=>{}}>
+                    <ButtonText>
+                        투두리스트
+                    </ButtonText>
+                </StyledButton>
                 <InnerContainer>
-                    <StyledButton onPress={()=>{}}>
-                        <ButtonText>
-                            투두리스트
-                        </ButtonText>
-                    </StyledButton>
-                    <Icon name="heart-circle-outline" size={70} color="#2E79F2" />
-                    <Text>
-                        <Text>text</Text>
-                    </Text>
+                    <WelcomeContainer>
+                        <WelcomeImage resizeMode="cover" source={require('./../assets/insteadTm.png')}/>
+                    </WelcomeContainer>{/*캐릭터 부분으로 나중에 변경하기*/}
                 </InnerContainer>
 
         </StyledContainer>

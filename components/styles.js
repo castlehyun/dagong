@@ -151,7 +151,3 @@ export const Line=styled.View`
 
 `;
 
-export const Text=styled.Text`
-    color:${primary};
-    font-size:16px;
-`;
