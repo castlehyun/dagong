@@ -26,12 +26,16 @@ import {
     Colors,
     MsgBox,
     Line,
+    ExtraText,
+    ExtraView,
+    TextLink,
+    TextLinkContent,
 } from './../components/styles';
 
 //Colors
 const {brand,darkLight} = Colors;
 
-const Signup=()=>{
+const Signup=({navigation})=>{
     const [hidePassword, setHidePassword] = useState(true);
     return (
         <StyledContainer>
@@ -44,6 +48,7 @@ const Signup=()=>{
                     initialValues={{ fullName:'', email:'',password:'', confirmPassword:'', age:''}}
                     onSubmit={(values)=>{
                         console.log(values);
+                        navigation.navigate('Welcome');
                     }}
                 >
                     {({handleChange, handleBlur, handleSubmit, values})=>(
@@ -108,11 +113,16 @@ const Signup=()=>{
                         <MsgBox>...</MsgBox>
                         <StyledButton onPress={handleSubmit}>
                             <ButtonText>
-                                Login
+                                Signup
                             </ButtonText>
                         </StyledButton>
                         <Line />
-                        
+                        {/*<ExtraView>
+                            <ExtraText>이미 계정이 있나요?</ExtraText>
+                            <TextLink onPress={()=>navigation.navigate('Login')}>
+                                <TextLinkContent>로그인하기</TextLinkContent>
+                            </TextLink>
+                    </ExtraView>*/}
                     </StyledFormArea>
                     )}
 

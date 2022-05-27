@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import React, {useState, Component} from 'react';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {StatusBar} from 'expo-status-bar';
+
+
 //formik
 import {Formik} from 'formik';
 
@@ -8,7 +10,7 @@ import {Formik} from 'formik';
 import {Octicons, Ionicons} from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import {View} from 'react-native';
+import {View, Text, Button, StyleSheet } from 'react-native';
 
 import {
     StyledContainer,
@@ -29,55 +31,36 @@ import {
     WelcomeContainer,
     WelcomeImage,
     Avatar,
-    Text,
+    myContainer,
 } from './../components/styles';
 
 //Colors
 const {brand,darkLight} = Colors;
 
-const Welcome=()=>{
-    const [hidePassword, setHidePassword] = useState(true);
-    return (
-        <StyledContainer style={{flex:2,justifyContent:'space-around',flexDirection:'row'}}>
-                <StyledButton onPress={()=>{}}>
-                    <ButtonText>
-                        상점 가기
-                    </ButtonText>
-                </StyledButton>
-                <Icon name="alarm-outline" size={70} color="#2E79F2" />
-                <Icon name="heart-circle-outline" size={70} color="#2E79F2" />
-                <StyledButton onPress={()=>{}}>
-                    <ButtonText>
-                        투두리스트
-                    </ButtonText>
-                </StyledButton>
-                <InnerContainer>
-                    <WelcomeContainer>
-                        <WelcomeImage resizeMode="cover" source={require('./../assets/insteadTm.png')}/>
-                    </WelcomeContainer>{/*캐릭터 부분으로 나중에 변경하기*/}
-                </InnerContainer>
+const Welcome=({navigation})=>{
+    return(
+        <>
+            <StatusBar style="light" />
+            <InnerContainer>
+                <WelcomeImage resizeMode="cover" source={require('./../assets/logo.png')} />
+                <WelcomeContainer>
+                    <PageTitle welcome={true}>다공에 오신 것을 환영합니다!</PageTitle>
+                    <SubTitle welcome={true}>열심히 공부해 보아요^_^</SubTitle>
 
-        </StyledContainer>
-
+                    <StyledFormArea>
+                        <Line />
+                        <StyledButton onPress={()=>{navigation.navigate('Login');
+                    }}
+                    >
+                            <ButtonText>로그아웃</ButtonText>
+                        </StyledButton>
+                    </StyledFormArea>
+                </WelcomeContainer>
+            </InnerContainer>
+        </>
     );
 };
-
-const MyTextInput=({label, icon, isPassword,hidePassword,setHidePassword, ...props})=>{
-    return (
-        <View>
-            <LeftIcon>
-                <Octicons name={icon} size={30} color={brand}/>
-            </LeftIcon>
-            <StyledInputLabel>{label}</StyledInputLabel>
-            <StyledTextInput {...props} />
-            {isPassword && (
-                <RightIcon onPress={()=>setHidePassword(!hidePassword)}>
-                    <Ionicons name={hidePassword ? 'md-eye-off': 'md-eye'} size={30} color={darkLight}/>
-                </RightIcon>
-            )}
-        </View>
-    );
-};
+   
 
 
 export default Welcome;

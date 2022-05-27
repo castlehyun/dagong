@@ -20,7 +20,7 @@ const {primary,secondary,tertiary,darkLight,brand,green,red}=Colors;
 export const StyledContainer=styled.View`
     flex:1;
     padding:25px;
-    padding-top:${StatusBarHeight + 10}px;
+    padding-top:${StatusBarHeight + 30}px;
     background-color:${primary};
 `;
 
@@ -29,6 +29,11 @@ export const InnerContainer=styled.View`
     width:100%;
     align-items:center;
 
+`;
+export const myContainer=styled.View`
+    flex:1;
+    width:100%;
+    align-items:center;
 `;
 
 export const WelcomeContainer=styled(InnerContainer)`
@@ -149,5 +154,19 @@ export const Line=styled.View`
     background-color:${darkLight};
     margin-vertical:10px;
 
+`;
+
+export const ExtraView=styled.View`
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+`;
+
+export const ExtraText=styled.Text`
+    justify-content: center;
+    align-content: center;
+    color: ${tertiary};
+    font-size: 15px;
 `;
 
