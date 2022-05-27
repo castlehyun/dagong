@@ -84,6 +84,11 @@ const Login=({navigation})=>{
                                 Login
                             </ButtonText>
                         </StyledButton>
+                        <StyledButton onPress={()=>navigation.navigate("Signup")}>
+                            <ButtonText>
+                                회원가입
+                            </ButtonText>
+                        </StyledButton>
                         <Line />
 
                         {/*<ExtraView>
