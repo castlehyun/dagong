@@ -95,7 +95,7 @@ const Signup=({navigation})=>{
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('confirmPassword')}
                             onBlur={handleBlur('confirmPassword')}
-                            value={values.password}
+                            value={values.confirmPassword}
                             secureTextEntry={hidePassword}
                             isPassword={true}
                             hidePassword={hidePassword}
