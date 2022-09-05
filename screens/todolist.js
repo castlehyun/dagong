@@ -45,6 +45,15 @@ import {
 const {brand,darkLight} = Colors;
 
 const TodoList=({navigation})=>{
+  state={
+    text:'',
+    inputText:''
+  }
+
+  //할 일 등록
+  submitBtn=()=>{
+    this.setState({text:this.state.inputText});}  
+    
   const [hidePassword, setHidePassword] = useState(true);
   return (
       <StyledContainer>
@@ -67,28 +76,28 @@ const TodoList=({navigation})=>{
                           icon="heart"
                           placeholder="수학 공부 하기"
                           placeholderTextColor={darkLight}
-                          onChangeText={handleChange('Todolist')  
-                        }
+                          onChangeText={(text)=>{this.setState({inputText: text})}}
                           onBlur={handleBlur('Todolist')
                           
                         }
                       />
-                      <StyledButton2>
+                      <StyledButton2 onPress={this.submitBtn}>
                         <ScheduleButtonText>
                             +
                         </ScheduleButtonText>
                     </StyledButton2>
                       </ScheduleFormArea>
-                    
-                      
-                      <StyledFormArea>
+                    <StyledFormArea>
                       <MsgBox>
                       </MsgBox>
                       <MsgBox>
+                        
                       </MsgBox>
                       <ScheduleTextBox>
-                        할 일 확인
+                        
                       </ScheduleTextBox>
+
+
                       </StyledFormArea>
                       
                   </StyledFormArea>
