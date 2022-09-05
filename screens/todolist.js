@@ -27,6 +27,8 @@ import {
     RightIcon,
     StyledButton,
     StyledButton2,
+    ScheduleButton,
+    ScheduleFormArea,
     ButtonText,
     Colors,
     MsgBox,
@@ -58,6 +60,7 @@ const TodoList=({navigation})=>{
               >
                   {({handleChange, handleBlur, handleSubmit, values})=>(
                   <StyledFormArea>
+                    <ScheduleFormArea>
                       <MyTextInput
                           label="Todolist"
                           icon="heart"
@@ -69,37 +72,30 @@ const TodoList=({navigation})=>{
                           
                         }
                       />
-                    <StyledButton2>
+                      <StyledButton2>
                         <ButtonText>
                             +
                         </ButtonText>
                     </StyledButton2>
-                      <MsgBox>...</MsgBox>
-                      <StyledButton onPress={handleSubmit}>
-                          <ButtonText>
-                              할 일 등록
-                          </ButtonText>
-                      </StyledButton>
-                      <StyledButton onPress={()=>navigation.navigate("TodoList")}>
-                          <ButtonText>
-                              할 일 확인
-                          </ButtonText>
-                      </StyledButton>
-                      <Line />
-
-                      {/*<ExtraView>
-                          <ExtraText>아직 계정이 없으신가요?</ExtraText>
-                          <TextLink onPress={()=>navigation.navigate("Signup")}>
-                              <TextLinkContent>회원가입</TextLinkContent>
-                          </TextLink>    
-                  </ExtraView>*/}
+                      </ScheduleFormArea>
+                    
+                      
+                      <StyledFormArea>
+                        <MyTextInput>
+                            할 일 체크
+                        </MyTextInput>
+                      </StyledFormArea>
+                      
                   </StyledFormArea>
-                  )}
+                  
 
+
+                  )}
               </Formik>
 
           </InnerContainer>
       </StyledContainer>
+      
   );
 };
 

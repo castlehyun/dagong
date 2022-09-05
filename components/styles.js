@@ -90,7 +90,12 @@ export const SubTitle = styled.Text`
 
 export const StyledFormArea=styled.View`
     width:90%;
+    
+`;
 
+export const ScheduleFormArea=styled.View`
+    width:90%;
+    flex-direction:row;
 `;
 
 export const StyledTextInput=styled.TextInput`
