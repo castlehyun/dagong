@@ -27,6 +27,7 @@ import {
     RightIcon,
     StyledButton,
     StyledButton2,
+    ScheduleButtonText,
     ScheduleButton,
     ScheduleFormArea,
     ButtonText,
@@ -48,11 +49,10 @@ const TodoList=({navigation})=>{
       <StyledContainer>
           <StatusBar style="dark" />
           <InnerContainer>
-              <PageTitle>Dagong</PageTitle>
+          <PageTitle>Dagong</PageTitle>
               <SubTitle>할 일 리스트</SubTitle>
 
               <Formik
-                  initialValues={{email:'',password:''}}
                   onSubmit={(values)=>{
                       console.log(values);
                       navigation.navigate("Welcome");
@@ -73,9 +73,9 @@ const TodoList=({navigation})=>{
                         }
                       />
                       <StyledButton2>
-                        <ButtonText>
+                        <ScheduleButtonText>
                             +
-                        </ButtonText>
+                        </ScheduleButtonText>
                     </StyledButton2>
                       </ScheduleFormArea>
                     

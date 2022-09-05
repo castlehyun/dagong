@@ -96,6 +96,8 @@ export const StyledFormArea=styled.View`
 export const ScheduleFormArea=styled.View`
     width:90%;
     flex-direction:row;
+    align-items:center;
+    justifyContent:space-between;
 `;
 
 export const StyledTextInput=styled.TextInput`
@@ -109,6 +111,7 @@ export const StyledTextInput=styled.TextInput`
     margin-vertical:3px;
     margin-bottom:10px;
     color:${tertiary};
+    
 `;
 
 export const ScheduleTextInput=styled.TextInput`
@@ -163,15 +166,21 @@ export const StyledButton2 = styled.TouchableOpacity`
     background-color:#2E79F2;
     justify-content:center;
     align-items:center;
-    border-radius:2px;
+    border-radius:5px;
     margin-vertical:5px;
-    height:50px;
+    height:60px;
     width:40px;
+    
 `;
 
 export const ButtonText=styled.Text`
     color:${primary};
     font-size:16px;
+`;
+
+export const ScheduleButtonText=styled.Text`
+    color:${primary};
+    font-size:30px;
 `;
 
 export const MsgBox=styled.Text`
