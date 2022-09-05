@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, ScrollView} from 'react-native';
 import TodoListItem from './TodoListItem';
 
-import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {StatusBar} from 'expo-status-bar';
 //formik
@@ -24,8 +23,10 @@ import {
     LeftIcon,
     StyledInputLabel,
     StyledTextInput,
+    ScheduleTextInput,
     RightIcon,
     StyledButton,
+    StyledButton2,
     ButtonText,
     Colors,
     MsgBox,
@@ -45,7 +46,6 @@ const TodoList=({navigation})=>{
       <StyledContainer>
           <StatusBar style="dark" />
           <InnerContainer>
-              <PageLogo resizeMode="cover" source={require('./../assets/logo.png')} />
               <PageTitle>Dagong</PageTitle>
               <SubTitle>할 일 리스트</SubTitle>
 
@@ -63,14 +63,17 @@ const TodoList=({navigation})=>{
                           icon="heart"
                           placeholder="수학 공부 하기"
                           placeholderTextColor={darkLight}
-                          onChangeText={handleChange('Todolist')}
-                          onBlur={handleBlur('Todolist')}
-                          value={values.Todolist}
-                          secureTextEntry={hidePassword}
-                          isPassword={true}
-                          hidePassword={hidePassword}
-                          setHidePassword={setHidePassword}
+                          onChangeText={handleChange('Todolist')  
+                        }
+                          onBlur={handleBlur('Todolist')
+                          
+                        }
                       />
+                    <StyledButton2>
+                        <ButtonText>
+                            +
+                        </ButtonText>
+                    </StyledButton2>
                       <MsgBox>...</MsgBox>
                       <StyledButton onPress={handleSubmit}>
                           <ButtonText>
@@ -107,7 +110,7 @@ const MyTextInput=({label, icon, isPassword,hidePassword,setHidePassword, ...pro
               <Octicons name={icon} size={30} color={brand}/>
           </LeftIcon>
           <StyledInputLabel>{label}</StyledInputLabel>
-          <StyledTextInput {...props} />
+          <ScheduleTextInput {...props} />
           {isPassword && (
               <RightIcon onPress={()=>setHidePassword(!hidePassword)}>
                   <Ionicons name={hidePassword ? 'md-eye-off': 'md-eye'} size={30} color={darkLight}/>

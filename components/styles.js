@@ -106,10 +106,25 @@ export const StyledTextInput=styled.TextInput`
     color:${tertiary};
 `;
 
+export const ScheduleTextInput=styled.TextInput`
+    background-color:${secondary};
+    padding:15px;
+    padding-left:55px;
+    padding-right:55px;
+    border-radius:5px;
+    font-size:16px;
+    height:60px;
+    width:250px;
+    margin-vertical:3px;
+    margin-bottom:10px;
+    color:${tertiary};
+`;
+
 export const StyledInputLabel=styled.Text`
     color:${tertiary};
     font-size:13px;
     text-align:left;
+    width: 60px;
 
 `;
 
@@ -135,6 +150,18 @@ export const StyledButton = styled.TouchableOpacity`
     border-radius:5px;
     margin-vertical:5px;
     height:60px;
+`;
+
+//작은 버튼
+export const StyledButton2 = styled.TouchableOpacity`
+    padding:5px;
+    background-color:#2E79F2;
+    justify-content:center;
+    align-items:center;
+    border-radius:2px;
+    margin-vertical:5px;
+    height:50px;
+    width:40px;
 `;
 
 export const ButtonText=styled.Text`
