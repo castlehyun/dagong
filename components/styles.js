@@ -186,7 +186,11 @@ export const ScheduleButtonText=styled.Text`
 export const MsgBox=styled.Text`
     text-align:center;
     font-size:13px;
+`;
 
+export const ScheduleTextBox=styled.Text`
+    text-align:center;
+    font-size:20px;
 `;
 
 export const Line=styled.View`

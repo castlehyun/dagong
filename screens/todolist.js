@@ -33,6 +33,7 @@ import {
     ButtonText,
     Colors,
     MsgBox,
+    ScheduleTextBox,
     Line,
     ExtraText,
     ExtraView,
@@ -81,9 +82,13 @@ const TodoList=({navigation})=>{
                     
                       
                       <StyledFormArea>
-                        <MyTextInput>
-                            할 일 체크
-                        </MyTextInput>
+                      <MsgBox>
+                      </MsgBox>
+                      <MsgBox>
+                      </MsgBox>
+                      <ScheduleTextBox>
+                        할 일 확인
+                      </ScheduleTextBox>
                       </StyledFormArea>
                       
                   </StyledFormArea>
