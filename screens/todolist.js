@@ -55,6 +55,17 @@ const TodoList=({navigation})=>{
     this.setState({text:this.state.inputText});}  
     
   const [hidePassword, setHidePassword] = useState(true);
+  //todos:{id:Number, textValue: string, checked: boolean} 
+  const [todos, setTodos]=useState([]);   //할 일 체크 여부를 위한 배열
+
+  const addTodo = text =>{
+    setTodos([
+      ...todos,
+      {id: Math.random().toString(),textValue:text, checked: false},
+    ]);
+  };
+
+
   return (
       <StyledContainer>
           <StatusBar style="dark" />
