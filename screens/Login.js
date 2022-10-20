@@ -37,6 +37,7 @@ const {brand,darkLight} = Colors;
 
 const Login=({navigation})=>{
     const [hidePassword, setHidePassword] = useState(true);
+    
     return (
         <StyledContainer>
             <StatusBar style="dark" />
@@ -49,7 +50,12 @@ const Login=({navigation})=>{
                     initialValues={{email:'',password:''}}
                     onSubmit={(values)=>{
                         console.log(values);
-                        navigation.navigate("Welcome");
+                        if(values.email=="admin" && values.password=="dagong1234"){
+                            navigation.navigate("Welcome");
+                        }
+                        else{
+                            console.log("error~");
+                        }
                     }}
                 >
                     {({handleChange, handleBlur, handleSubmit, values})=>(
@@ -104,6 +110,7 @@ const Login=({navigation})=>{
 
             </InnerContainer>
         </StyledContainer>
+        
     );
 };
 
@@ -124,5 +131,8 @@ const MyTextInput=({label, icon, isPassword,hidePassword,setHidePassword, ...pro
     );
 };
 
+function login() {
+    
+}
 
 export default Login;
