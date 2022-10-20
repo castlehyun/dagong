@@ -47,8 +47,30 @@ const Signup=({navigation})=>{
                 <Formik
                     initialValues={{ fullName:'', email:'',password:'', confirmPassword:'', age:''}}
                     onSubmit={(values)=>{
+                        
+                        // 입력 안하는 것 방지
+                        if (values.fullName == ""){
+                            alert("이름을 입력해 주세요.");
+                        } else if (values.email == ""){
+                            alert("이메일을 입력해주세요.");
+                        } else if (values.password == ""){
+                            alert("비밀번호를 입력해주세요.");
+                        } else if (values.confirmPassword == ""){
+                            alert("비밀번호(재확인)를 입력해주세요.");
+                        } else if (values.age == ""){
+                            alert("나이를 입력해주세요.")
+                        } else{
+                            // password, confirm password 일치 확인
+                            if(values.password!=values.confirmPassword){
+                                alert("비밀번호가 일치하지 않습니다.")
+                            }else{
+                                navigation.navigate("Welcome");
+                            }
+                        }
+                        
+                        // 로컬 db 넣는 거 추가 예정.
                         console.log(values);
-                        navigation.navigate('Welcome');
+                        
                     }}
                 >
                     {({handleChange, handleBlur, handleSubmit, values})=>(
