@@ -11,7 +11,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from './../screens/Login';
 import Signup from './../screens/Signup';
 import Welcome from './../screens/Welcome';
-import Template from './../components/Template';
+import Todo from './../screens/Todo';
 
 
 const Stack=createStackNavigator();
@@ -36,7 +36,7 @@ const RootStack=()=>{
             >
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Signup" component={Signup} />
-                <Stack.Screen name="Template" component={Template} />
+                <Stack.Screen name="Todo" component={Todo} />
                 <Stack.Screen options= {{headerTintColor:primary}} name="Welcome" component={Welcome} />
             </Stack.Navigator>
         </NavigationContainer>
