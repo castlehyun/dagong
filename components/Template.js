@@ -1,12 +1,15 @@
 import React from "react";
-//import "./Template.css";
+import {
+  View,
+  Text,
+} from 'react-native';
 
-const Template = ({ children, todoLength }) => {
-  return (
-    <div className="Template">
-      <div className="title">오늘의 할 일 ({todoLength})</div>
-      <div>{children}</div>
-    </div>
+const Template=()=>{
+  return(
+    <Text>
+      <Text>오늘의 할 일(0)</Text>
+      <Text>할 일 목록</Text>
+    </Text>
   );
 };
 
