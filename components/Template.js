@@ -8,10 +8,10 @@ import TodoList from '../components/TodoList';
 
 const Template=()=>{
   return(
-    <Text>
+    <View>
       <Text>오늘의 할 일(0)</Text>
       <Text>투두리스트 넣을 곳</Text>      
-    </Text>
+    </View>
   );
 };
 
