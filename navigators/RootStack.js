@@ -11,7 +11,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from './../screens/Login';
 import Signup from './../screens/Signup';
 import Welcome from './../screens/Welcome';
-import Todo from './../screens/Todo';
 import Todolist2 from "../screens/Todolist2";
 
 const Stack=createStackNavigator();
@@ -36,7 +35,6 @@ const RootStack=()=>{
             >
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Signup" component={Signup} />
-                <Stack.Screen name="Todo" component={Todo} />
                 <Stack.Screen name="Todolist2" component={Todolist2} />
                 <Stack.Screen options= {{headerTintColor:primary}} name="Welcome" component={Welcome} />
             </Stack.Navigator>
