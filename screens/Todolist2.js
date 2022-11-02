@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import Title from '../components/Title';
 import React from 'react';
-import { StyleSheet, View, Text, SafeAreaView, Button } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView, Button, Image } from 'react-native';
 import { useState } from 'react';
 import Input from '../components/Input';
+import IconButton from '../components/IconButton';
+import {images} from '../components/images';
 
 export default function Todolist2() {
     const [newTask, setNewTask]=useState('');
@@ -26,12 +28,10 @@ export default function Todolist2() {
                 onChangeText={_handleTextChange}
                 onSubmitEditing={_addTask}
             />
-            <Button
-                title="enter"
-                onPress={()=>{
-                    _addTask();
-                }}
-            />
+            <IconButton type={images.uncompleted} />
+            <IconButton type={images.completed} />
+            <IconButton type={images.delete} />
+            <IconButton type={images.edit} />
         </SafeAreaView>
     );
 }
