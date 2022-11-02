@@ -1,9 +1,16 @@
 import React from "react";
 import { Dimensions, StyleSheet, Text, TextInput } from "react-native";
 
-const Input=()=>{
+const Input=({ value, onChangeText, onSubmitEditing})=>{
     return (
-        <TextInput style={StyleSheet.input} placeholder="+ 할 일 추가" maxLength={50} />
+        <TextInput 
+            style={StyleSheet.input} 
+            placeholder="+ 할 일 추가" 
+            maxLength={50}
+            value={value}
+            onChangeText={onChangeText}
+            onSubmitEditing={onSubmitEditing}
+            />
     );
 };
 
