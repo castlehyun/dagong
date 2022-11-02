@@ -1,15 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import Title from '../components/Title';
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
 
 export default function Todolist2() {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Title title="todo list"></Title>
             <Text>start</Text>
             <StatusBar style='auto' />
-        </View>
+        </SafeAreaView>
     );
 }
 
