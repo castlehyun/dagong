@@ -7,6 +7,7 @@ const Input=({ value, onChangeText, onSubmitEditing})=>{
             style={StyleSheet.input} 
             placeholder="+ 할 일 추가" 
             maxLength={50}
+            fontSize= '25'
             value={value}
             onChangeText={onChangeText}
             onSubmitEditing={onSubmitEditing}
