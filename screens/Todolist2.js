@@ -39,7 +39,7 @@ export default function Todolist2() {
 const styles=StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#AFC8F0',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
     },
