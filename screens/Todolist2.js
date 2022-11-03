@@ -13,11 +13,8 @@ export default function Todolist2() {
     const [newTask, setNewTask]=useState('');
 
     const [tasks,setTasks]=useState({
-        1: {id: '1', text: 'todolist1', completed:false},
-        2: {id: '2', text: 'todolist2', completed:false},
-        3: {id: '3', text: 'todolist3', completed:false},
-        4: {id: '4', text: 'todolist4', completed:false},
-        5: {id: '5', text: 'todolist5', completed:false},
+        1: {id: '1', text: '할 일 예시 1', completed:false},
+        2: {id: '2', text: '할 일 예시 2', completed:false},
     });
 
     const _addTask=()=>{
