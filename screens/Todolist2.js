@@ -11,9 +11,21 @@ import Task from '../components/Task';
 export default function Todolist2() {
     const [newTask, setNewTask]=useState('');
 
+    const [tasks,setTasks]=useState({
+        1: {id: '1', text: 'todolist1', completed:false},
+        2: {id: '2', text: 'todolist2', completed:false},
+        3: {id: '3', text: 'todolist3', completed:false},
+        4: {id: '4', text: 'todolist4', completed:false},
+        5: {id: '5', text: 'todolist5', completed:false},
+    });
+
     const _addTask=()=>{
-        alert(`add : ${newTask}`);
+        const ID = Date.now().toString();
+        const newTaskObject = {
+            [ID]: {id: ID, text: newTask, completed: false},
+        };
         setNewTask('');
+        setTasks({...tasks, ...newTaskObject})
     };
 
     const _handleTextChange = (text) =>{
@@ -30,12 +42,11 @@ export default function Todolist2() {
                 onSubmitEditing={_addTask}
             />
             <ScrollView>
-                <Task text="todolist 1" />
-                <Task text="todolist 2" />
-                <Task text="todolist 3" />
-                <Task text="todolist 4" />
-                <Task text="todolist 5" />
-                <Task text="todolist 6" />
+                {Object.values(tasks)
+                    .reverse()
+                    .map((item) => (
+                        <Task key={item.id} text={item.text} />
+                    ))}
             </ScrollView>
         </SafeAreaView>
     );
