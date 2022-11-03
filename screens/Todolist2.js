@@ -45,6 +45,13 @@ export default function Todolist2() {
         setTasks(currentTasks);
     };
 
+    const _updateTask = (item) => {
+        const currentTasks = Object.assign({},tasks);
+        currentTasks[item.id]=item;
+        setTasks(currentTasks);
+    }
+
+
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar style='auto' />
@@ -63,6 +70,7 @@ export default function Todolist2() {
                             item={item} 
                             deleteTask={_deleteTask}
                             toggleTask={_toggleTask}
+                            updateTask={_updateTask}
                         />
                     ))}
             </ScrollView>
