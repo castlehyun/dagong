@@ -3,13 +3,17 @@ import IconButton from "./IconButton";
 import { images } from "./images";
 import { StyleSheet, View, Text } from "react-native";
 
-const Task = ({text}) => {
+const Task = ({item, deleteTask, toggleTask}) => {
     return (
         <View style={styles.container}>
-            <IconButton type={images.uncompleted} />
-            <Text style={{fontSize: 20, flex: 1}}>{text}</Text>
+            <IconButton 
+                type={item.completed ? images.completed : images.uncompleted}
+                id={item.id}
+                onPressOut={toggleTask}
+                />
+            <Text style={{fontSize: 20, flex: 1}}>{item.text}</Text>
             <IconButton type={images.edit} />
-            <IconButton type={images.delete} />
+            <IconButton type={images.delete} id={item.id} onPressOut={deleteTask} />
         </View>
     );
 };

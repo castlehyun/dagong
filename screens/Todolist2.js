@@ -8,6 +8,7 @@ import IconButton from '../components/IconButton';
 import {images} from '../components/images';
 import Task from '../components/Task';
 
+
 export default function Todolist2() {
     const [newTask, setNewTask]=useState('');
 
@@ -32,6 +33,18 @@ export default function Todolist2() {
         setNewTask(text);
     };
 
+    const _deleteTask = (id) =>{
+        const currentTasks=Object.assign({}, tasks);
+        delete currentTasks[id];
+        setTasks(currentTasks);
+    };
+
+    const _toggleTask = (id) => {
+        const currentTasks = Object.assign({},tasks);
+        currentTasks[id]['completed'] = !currentTasks[id]['completed'];
+        setTasks(currentTasks);
+    };
+
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar style='auto' />
@@ -45,7 +58,12 @@ export default function Todolist2() {
                 {Object.values(tasks)
                     .reverse()
                     .map((item) => (
-                        <Task key={item.id} text={item.text} />
+                        <Task 
+                            key={item.id} 
+                            item={item} 
+                            deleteTask={_deleteTask}
+                            toggleTask={_toggleTask}
+                        />
                     ))}
             </ScrollView>
         </SafeAreaView>
