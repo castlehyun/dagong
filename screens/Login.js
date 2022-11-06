@@ -50,11 +50,11 @@ const Login=({navigation})=>{
                     initialValues={{email:'',password:''}}
                     onSubmit={(values)=>{
                         console.log(values);
-                        if(values.email=="admin" && values.password=="dagong1234"){
+                        if(values.email=="admin" && values.password=="1234"){
                             navigation.navigate("Welcome");
                         }
                         else{
-                            console.log("error~");
+                            alert("아이디 또는 비밀번호를 확인해주세요.")
                         }
                     }}
                 >

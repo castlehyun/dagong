@@ -11,6 +11,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from './../screens/Login';
 import Signup from './../screens/Signup';
 import Welcome from './../screens/Welcome';
+import StopWatchAPI from "../screens/StopWatchAPI";
 
 const Stack=createStackNavigator();
 
@@ -33,6 +34,7 @@ const RootStack=()=>{
                 initialRouteName="Login"
             >
                 <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="StopWatchAPI" component={StopWatchAPI} />                 
                 <Stack.Screen name="Signup" component={Signup} />
                 <Stack.Screen options= {{headerTintColor:primary}} name="Welcome" component={Welcome} />
             </Stack.Navigator>

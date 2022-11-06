@@ -137,6 +137,16 @@ export const StyledButton = styled.TouchableOpacity`
     height:60px;
 `;
 
+export const Button_timer = styled.TouchableOpacity`
+    padding:10px;
+    background-color:#2E79F2;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    margin-vertical:5px;
+    height:50px;
+`;
+
 export const ButtonText=styled.Text`
     color:${primary};
     font-size:16px;
@@ -170,3 +180,9 @@ export const ExtraText=styled.Text`
     font-size: 15px;
 `;
 
+export const Text_TIMER=styled.Text`
+    justify-content: center;
+    align-content: center;
+    color: ${tertiary};
+    font-size: 30px;
+`;

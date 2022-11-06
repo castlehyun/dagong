@@ -127,11 +127,14 @@ const Welcome=({navigation})=>{
                 <WelcomeContainer>
                     <PageTitle welcome={true}>다공에 오신 것을 환영합니다!</PageTitle>
                     <SubTitle welcome={true}>열심히 공부해 보아요^_^</SubTitle>
-                    <StyledButton>
+                    <StyledButton onPress={()=>{navigation.navigate('StopWatchAPI');}}>
                         <ButtonText>
                             타이머
                         </ButtonText>
                     </StyledButton>
+                    {/* <Text style={{fontSize:20, borderRadius: 5, padding:5, margin:5}}>
+                        point : 10
+                    </Text> */}
 
                     <StyledFormArea>
                         <Line />
