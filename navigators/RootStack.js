@@ -12,6 +12,7 @@ import Login from './../screens/Login';
 import Signup from './../screens/Signup';
 import Welcome from './../screens/Welcome';
 import Todolist2 from "../screens/Todolist2";
+import StopWatchAPI from "../screens/StopWatchAPI";
 
 const Stack=createStackNavigator();
 
@@ -34,6 +35,7 @@ const RootStack=()=>{
                 initialRouteName="Login"
             >
                 <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="StopWatchAPI" component={StopWatchAPI} />
                 <Stack.Screen name="Signup" component={Signup} />
                 <Stack.Screen name="Todolist2" component={Todolist2} />
                 <Stack.Screen options= {{headerTintColor:primary}} name="Welcome" component={Welcome} />

@@ -215,3 +215,9 @@ export const ExtraText=styled.Text`
     font-size: 15px;
 `;
 
+export const Text_TIMER=styled.Text`
+    justify-content: center;
+    align-content: center;
+    color: ${tertiary};
+    font-size: 30px;
+`;

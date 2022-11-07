@@ -12,3 +12,6 @@ web-build/
 
 # macOS
 .DS_Store
+
+# RDS DB 정보
+/server/config/db.js

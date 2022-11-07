@@ -8,7 +8,7 @@ import {Formik} from 'formik';
 import {Octicons, Ionicons} from '@expo/vector-icons';
 
 
-import {View, SafeAreaView} from 'react-native';
+import {View} from 'react-native';
 
 import {
     StyledContainer,
@@ -37,6 +37,7 @@ const {brand,darkLight} = Colors;
 
 const Login=({navigation})=>{
     const [hidePassword, setHidePassword] = useState(true);
+    
     return (
         <StyledContainer>
             <StatusBar style="dark" />
@@ -49,7 +50,12 @@ const Login=({navigation})=>{
                     initialValues={{email:'',password:''}}
                     onSubmit={(values)=>{
                         console.log(values);
-                        navigation.navigate("Welcome");
+                        if(values.email=="admin" && values.password=="1234"){
+                            navigation.navigate("Welcome");
+                        }
+                        else{
+                            alert("아이디 또는 비밀번호를 확인해주세요.")
+                        }
                     }}
                 >
                     {({handleChange, handleBlur, handleSubmit, values})=>(
@@ -89,11 +95,6 @@ const Login=({navigation})=>{
                                 회원가입
                             </ButtonText>
                         </StyledButton>
-                        <StyledButton onPress={()=>navigation.navigate("Todolist2")}>
-                            <ButtonText>
-                                할 일 확인
-                            </ButtonText>
-                        </StyledButton>
                         <Line />
 
                         {/*<ExtraView>
@@ -103,7 +104,6 @@ const Login=({navigation})=>{
                             </TextLink>    
                     </ExtraView>*/}
                     </StyledFormArea>
-                    
                     )}
 
                 </Formik>
@@ -131,5 +131,8 @@ const MyTextInput=({label, icon, isPassword,hidePassword,setHidePassword, ...pro
     );
 };
 
+function login() {
+    
+}
 
 export default Login;
