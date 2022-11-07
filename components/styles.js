@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {View, Text, Image,TextInput,TouchableOpacity} from 'react-native';
+import {View, Text, Image,TextInput,TouchableOpacity, ScrollView} from 'react-native';
 import Constants from 'expo-constants';
 
 const StatusBarHeight=Constants.statusBarHeight;
@@ -17,7 +17,7 @@ export const Colors={
 };
 
 const {primary,secondary,tertiary,darkLight,brand,green,red}=Colors;
-export const StyledContainer=styled.View`
+export const StyledContainer=styled.ScrollView`
     flex:1;
     padding:25px;
     padding-top:${StatusBarHeight + 30}px;

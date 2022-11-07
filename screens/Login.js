@@ -8,7 +8,7 @@ import {Formik} from 'formik';
 import {Octicons, Ionicons} from '@expo/vector-icons';
 
 
-import {View} from 'react-native';
+import {View, SafeAreaView} from 'react-native';
 
 import {
     StyledContainer,
@@ -103,12 +103,14 @@ const Login=({navigation})=>{
                             </TextLink>    
                     </ExtraView>*/}
                     </StyledFormArea>
+                    
                     )}
 
                 </Formik>
 
             </InnerContainer>
         </StyledContainer>
+        
     );
 };
 
