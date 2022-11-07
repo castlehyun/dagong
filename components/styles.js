@@ -27,7 +27,7 @@ export const StyledContainer=styled.ScrollView`
 export const InnerContainer=styled.View`
     flex:1;
     width:100%;
-    align-items:center;
+    align-items:flex-start;
 
 `;
 export const myContainer=styled.View`
@@ -221,8 +221,3 @@ export const Text_TIMER=styled.Text`
     color: ${tertiary};
     font-size: 30px;
 `;
-
-export const myImage=sytled.Image`
-    width: 100px;
-    height: 100px;
-`

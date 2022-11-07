@@ -44,6 +44,10 @@ const Character=({navigation})=>{
                 <Image style={styles.Image}
                     source={require('./../assets/img/fall.jpg')}
                  />  
+                 <Text style={styles.Text}>
+                    {'\n'}
+                    당근을 열심히 키워보자
+                 </Text>
             </View>
         </>
     );
@@ -51,10 +55,15 @@ const Character=({navigation})=>{
    
 const styles=StyleSheet.create({
     Image: {
-        width: 100,
-        height: 100,
+        width: 400,
+        height: 600,
         resizeMode: "cover",
     },
+    Text: {
+        fontSize: 35,
+        fontWeight: "bold",
+        textAlign: "center",
+    }
 });
 
 export default Character;

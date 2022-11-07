@@ -52,7 +52,7 @@ export default function Todolist2() {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar style='auto' />
-            <Title title="🍪Todo list🍪"></Title>
+            <Title title="🥕Todo list🥕"></Title>
             <Input
                 value={newTask}
                 onChangeText={_handleTextChange}
