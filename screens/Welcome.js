@@ -36,88 +36,6 @@ import {
 
 //Colors
 const {brand,darkLight} = Colors;
-
-//timer를 위한 코드
-const StartWorkout=()=>{
-    //states
-    const [timer, setTimer]=useState(0);
-    const [minute, setMinute]=useState("");
-    const [second, setSecond]=useState("");
-    const [milliSecond, setMilliSecond] = useState("");
-    const [toggleTimer, setToggleTimer] = useState(false);
-    const [toggleBtnName, setToggleBtnName] = useState("시작");
-    const [isTimerRunning, setIsTimerRunning] = useState(false);
-    const [intervalId, setIntervalId] = useState(0)
-    let startTime = 0;
-
-    const leftTimeRef=useRef(0);
-
-    //Hooks
-    useEffect(()=>{
-        minuteCalculator();
-        console.log("남은 시간: ",timer);
-        if (timer<=0){
-            setToggleTimer(false);
-            setIsTimerRunning(false);
-        }
-    },[timer])
-
-    useEffect(()=>{
-        if (toggleTimer){
-            startTime=Date.now();
-            const timerInterval=setInterval(timeDecrement,1000);
-            leftTimeRef.current=timer;
-            setIntervalId(timerInterval);
-            setIsTimerRunning(true);
-        } else if (!toggleTimer || timer<0){
-            clearInterval(intervalId);
-        }
-    }, [toggleTimer])
-
-    useEffect(()=>{
-        if(!isTimerRunning){
-            setToggleBtnName('시작');
-        } else if (isTimerRunning && !toggleTimer){
-            setToggleBtnName('다시 시작');    
-        } else if (isTimerRunning && toggleTimer){
-            setToggleBtnName('일시정지');
-        }
-    
-
-    }, [isTimerRunning, toggleTimer])
-    //event Handleler
-    const addTime=(time)=>{
-        setTimer((prev)=>prev+time)
-    }
-    const minuteCalculator = () => {
-        let tempMinute = parseInt(timer / 60).toString();
-        let tempSecond = timer % 60
-        let tempSecondre = Math.round((tempSecond / 1)).toString();
-        let tempMilliSecond = Math.round(((tempSecond % 1) * 100)).toString()
-
-        setMinute(tempMinute);
-        setSecond(tempSecondre);
-        setMilliSecond(tempMilliSecond);
-    }
-    const toggleTimerFunc = () => {
-        if (toggleTimer) {
-            setToggleTimer(false)
-        } else if (!toggleTimer && timer > 0){
-            setToggleTimer(true)
-        }
-    }
-
-    const timeDecrement = () => {
-        setTimer((prev) => prev - 0.01);
-    }
-
-    const clearTime = () => {
-        setTimer(0);
-    }
-    
-    // ... return 
-}
-
 const Welcome=({navigation})=>{
     return(
         <>
@@ -136,6 +54,12 @@ const Welcome=({navigation})=>{
                     <StyledButton onPress={()=>navigation.navigate("Todolist2")}>
                             <ButtonText>
                                 할 일 확인
+                            </ButtonText>
+                    </StyledButton>
+
+                    <StyledButton onPress={()=>navigation.navigate("Character")}>
+                            <ButtonText>
+                                캐릭터 보러가기
                             </ButtonText>
                     </StyledButton>
                     {/* <Text style={{fontSize:20, borderRadius: 5, padding:5, margin:5}}>

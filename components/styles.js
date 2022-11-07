@@ -221,3 +221,8 @@ export const Text_TIMER=styled.Text`
     color: ${tertiary};
     font-size: 30px;
 `;
+
+export const myImage=sytled.Image`
+    width: 100px;
+    height: 100px;
+`

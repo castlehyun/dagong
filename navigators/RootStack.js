@@ -13,6 +13,7 @@ import Signup from './../screens/Signup';
 import Welcome from './../screens/Welcome';
 import Todolist2 from "../screens/Todolist2";
 import StopWatchAPI from "../screens/StopWatchAPI";
+import Character from "../screens/Character";
 
 const Stack=createStackNavigator();
 
@@ -38,6 +39,7 @@ const RootStack=()=>{
                 <Stack.Screen name="StopWatchAPI" component={StopWatchAPI} />
                 <Stack.Screen name="Signup" component={Signup} />
                 <Stack.Screen name="Todolist2" component={Todolist2} />
+                <Stack.Screen name="Character" component={Character} />
                 <Stack.Screen options= {{headerTintColor:primary}} name="Welcome" component={Welcome} />
             </Stack.Navigator>
         </NavigationContainer>
