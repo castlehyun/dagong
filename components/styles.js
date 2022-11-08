@@ -27,7 +27,7 @@ export const StyledContainer=styled.ScrollView`
 export const InnerContainer=styled.View`
     flex:1;
     width:100%;
-    align-items:flex-start;
+    align-items:center;
 
 `;
 export const myContainer=styled.View`
@@ -40,6 +40,14 @@ export const WelcomeContainer=styled(InnerContainer)`
     padding:25px;
     padding-top:10px;
     justify-content:center;
+`;
+
+export const WelcomeButtonContainer=styled(InnerContainer)`
+    padding:25px;
+    padding-top:10px;
+    justify-content:center;
+    flex-direction:row;
+    margin:5px;
 `;
 
 export const PageLogo=styled.Image`
@@ -171,6 +179,16 @@ export const StyledButton2 = styled.TouchableOpacity`
     height:60px;
     width:40px;
     
+`;
+
+export const WelcomeButton = styled.TouchableOpacity`
+    padding:15px;
+    background-color:#2E79F2;
+    justify-content:center;
+    align-items:center;
+    border-radius:5px;
+    margin-right:5px;
+    height:60px;
 `;
 
 export const ButtonText=styled.Text`
