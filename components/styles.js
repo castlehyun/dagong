@@ -27,12 +27,7 @@ export const StyledContainer=styled.ScrollView`
 export const InnerContainer=styled.View`
     flex:1;
     width:100%;
-<<<<<<< HEAD
     align-items: center;
-=======
-    align-items:center;
->>>>>>> 2f66ccd708d998d1fdac82fe9f213d9219dfcd38
-
 `;
 export const myContainer=styled.View`
     flex:1;
