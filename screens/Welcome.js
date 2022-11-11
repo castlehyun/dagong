@@ -28,9 +28,11 @@ import {
     Colors,
     MsgBox,
     Line,
+    WelcomeButtonContainer,
     WelcomeContainer,
     WelcomeImage,
     Avatar,
+    WelcomeButton,
     myContainer,
 } from './../components/styles';
 
@@ -45,22 +47,24 @@ const Welcome=({navigation})=>{
                 <WelcomeContainer>
                     <PageTitle welcome={true}>다공에 오신 것을 환영합니다!</PageTitle>
                     <SubTitle welcome={true}>열심히 공부해 보아요^_^</SubTitle>
-                    <StyledButton onPress={()=>{navigation.navigate('StopWatchAPI');}}>
-                        <ButtonText>
-                            타이머
-                        </ButtonText>
-                    </StyledButton>
-                    <StyledButton onPress={()=>navigation.navigate("Todolist2")}>
+                    <WelcomeButtonContainer>
+                        <WelcomeButton onPress={()=>{navigation.navigate('StopWatchAPI');}}>
                             <ButtonText>
-                                할 일 확인
+                                타이머
                             </ButtonText>
-                    </StyledButton>
+                        </WelcomeButton>
+                        <WelcomeButton onPress={()=>navigation.navigate("Todolist2")}>
+                                <ButtonText>
+                                    할 일 확인
+                                </ButtonText>
+                        </WelcomeButton>
 
-                    <StyledButton onPress={()=>navigation.navigate("Character")}>
-                            <ButtonText>
-                                캐릭터 보러가기
-                            </ButtonText>
-                    </StyledButton>
+                        <WelcomeButton onPress={()=>navigation.navigate("Character")}>
+                                <ButtonText>
+                                    캐릭터 보러가기
+                                </ButtonText>
+                        </WelcomeButton>
+                    </WelcomeButtonContainer>
                     {/* <Text style={{fontSize:20, borderRadius: 5, padding:5, margin:5}}>
                         point : 10
                     </Text> */}
