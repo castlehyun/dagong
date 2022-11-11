@@ -36,11 +36,20 @@ import {
 
 //Colors
 const {brand,darkLight} = Colors;
+
+// 현재 날짜 (월)
+const todayTime= () => {
+    let now = new Date();       // 현재 날짜 및 시간
+    let todayMonth=now.getMonth()+1;
+    return todayMonth;
+}
+
 const Character=({navigation})=>{
     return(
         <>
             <StatusBar style="light" />
             <View> 
+                {todayMonth == 11 ? <Image style={styles.Image} source={require('./../assets/img/winter.jpg')} /> :null}
                 <Image style={styles.Image}
                     source={require('./../assets/img/fall.jpg')}
                  />  
