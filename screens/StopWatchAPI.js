@@ -103,11 +103,11 @@ const StopWatchAPI = () => {
                           options={options}
                           // getTime={(time) => {}} 
                           />
-                        <TouchableHighlight onPress={toggleStopwatch} style={{backgroundColor:"#2E79F2", borderRadius: 5, padding:4, margin:5}}>
-                          <Text style={{ fontSize: 30}}>{!start ? "Start" : "Stop"}</Text>
+                        <TouchableHighlight onPress={toggleStopwatch} style={{backgroundColor:"#2E79F2", borderRadius: 5, padding:10, margin:5}}>
+                          <Text style={{ fontSize: 30, textAlign: 'center', color: "#FFFFFF"}}>{!start ? "Start" : "Stop"}</Text>
                         </TouchableHighlight>
-                        <TouchableHighlight onPress={resetStopwatch} style={{backgroundColor:"#2E79F2", borderRadius: 5, padding:4, margin:5}}>
-                          <Text style={{ fontSize: 30 }}>Reset</Text>
+                        <TouchableHighlight onPress={resetStopwatch} style={{backgroundColor:"#2E79F2", borderRadius: 5, padding:10, margin:5}}>
+                          <Text style={{ fontSize: 30, textAlign: 'center', color: '#FFFFFF' }}>Reset</Text>
                         </TouchableHighlight>
                       </View> 
                       {/* <StyledButton onPress={()=>navigation.navigate("Welcome")}>
